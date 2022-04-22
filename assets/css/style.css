@@ -19,6 +19,9 @@ input{box-shadow: 0 0 10px 1px gray; width: 325px;}
     justify-content: space-between;
 }
 
+.boh > span,
+.boh i{cursor: pointer;}
+
 
 .fai-te{
     color: #000;
