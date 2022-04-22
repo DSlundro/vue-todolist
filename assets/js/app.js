@@ -49,16 +49,11 @@ const app = new Vue ({
             }
             this.newTask = '';
         },
-        removeTask(i){
-            this.tasks.splice(i, 1)
-        },
+        removeTask(i){this.tasks.splice(i, 1)},
         changeDone(index){    
-            if ( this.tasks[index].done != true ){
-                
-                this.tasks[index].done = true;
-            } else{
-                this.tasks[index].done = false
-            }
+            if ( this.tasks[index].done != true )
+                {this.tasks[index].done = true;} 
+            else{this.tasks[index].done = false}
         },
     },
 });
