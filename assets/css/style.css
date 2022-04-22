@@ -1,0 +1,23 @@
+body{background-color: rgba(250, 210, 210, 0.562);}
+input{box-shadow: 0 0 10px 1px gray; width: 325px;}
+.my_container{
+    width: 800px; 
+    margin: auto; 
+    background-color: rgb(153, 238, 238);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 1px gray;
+}
+.sec{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+}
+.sec li{list-style-type: none;}
+
+.boh{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
