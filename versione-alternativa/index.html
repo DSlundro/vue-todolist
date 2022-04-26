@@ -34,10 +34,11 @@
                         <li v-for="(task, index) in tasks" class="px-5">
                             <div class="boh">
                                 <span v-if="task.done === true" class="text-decoration-line-through text-success" @click="changeDone(index)"> {{task.text}}</span> 
-                                <span v-else @click="changeDone(index)"> {{task.text}}</span> 
+                                <span v-else @click="trashedTask(index)"> {{task.text}}</span> 
                                 <span>
-                                    <i class="fa-solid fa-check" @click="changeDone(index)"></i> 
-                                    <i class="px-2 fa-solid fa-trash" @click="trashedTask(index)"></i>
+                                    <i class="fa-solid fa-check px-1" @click="changeDone(index)"></i> 
+                                    <i class="fa-solid fa-x px-1" @click="trashedTask(index)"></i>
+                                    <i class="fa-solid fa-trash px-1" @click="removeTask(index)"></i>
                                 </span>
                             </div><hr>
                         </li>
@@ -48,11 +49,13 @@
                     <h2 class="px-4 fw-bold">Completed</h2>
                     <ul class="fs-5 p-0">
                         <li v-for="(task, index) in tasks" v-if="task.done === true" >
-                            <span > {{task.text}}</span>
-                            <span>
-                                <i class="fa-solid fa-arrow-rotate-left" @click="changeDone(index)"></i>
-                            </span>
-                            <hr>
+                            <div class="boh">
+                                <span> {{task.text}}</span>
+                                <span>
+                                    <i class="fa-solid fa-arrow-rotate-left" @click="changeDone(index)"></i>
+                                </span>
+                                <hr>
+                            </div>
                         </li>
                     </ul>
                 </section>
@@ -61,12 +64,14 @@
                     <h2 class="px-4 fw-bold">Trashed </h2>
                     <ul class="fs-5 p-0">
                         <li v-for="(task, index) in tasks" v-if="task.trashed === true" >
-                            <span > {{task.text}}</span>
-                            <span>
-                                <i class="fa-solid fa-trash-arrow-up" @click="trashedTask(index)"></i>
-                                <button class="border-0 bg-transparent text-danger" @click="removeTask(index)">(Empty bin)</button>
-                            </span>
+                            <div class="boh">
+                                <span > {{task.text}}</span>
+                                <span>
+                                    <i class="fa-solid fa-trash-arrow-up" @click="trashedTask(index)"></i>
+                                    <button class="border-0 bg-transparent text-danger" @click="removeTask(index)">(Empty bin)</button>
+                                </span>
                             <hr>
+                            </div>
                         </li>
                     </ul>
                 </section>

@@ -45,7 +45,6 @@ const app = new Vue ({
                 {this.tasks[index].trashed = true;
                  this.tasks[index].done = false;} 
             else{this.tasks[index].trashed = false
-        
             }
         },
     },
